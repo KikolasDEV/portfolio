@@ -1,0 +1,116 @@
+{% include 'header.html' %}
+
+<div class="container mt-5">
+    <!-- Sección: Sobre mí con imagen -->
+    <section id="sobre-mi" class="text-center">
+        <img src="{{ url_for('static', filename='images/Kiko_Amarillo_CARA.jpg') }}" alt="José Francisco González Amarillo" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
+        <h1 class="display-4">¡Hola! Soy José Francisco González Amarillo</h1>
+        <p class="lead">Desarrollador de software con pasión por resolver problemas complejos. Tengo experiencia en Python y frameworks como Flask, Jinja, y Bootstrap.</p>
+        <!-- Botón para descargar el CV -->
+        <a href="{{ url_for('static', filename='CV_Jose_Francisco_Gonzalez_Amarillo.pdf') }}" class="btn btn-primary btn-lg mt-3" download="CV_Jose_Francisco_Gonzalez_Amarillo.pdf">
+            Descargar CV
+        </a>
+    </section>
+
+    <hr class="my-4">
+
+    <!-- Sección: Proyectos -->
+    <section id="proyectos" class="mt-5">
+        <h2>Proyectos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/proyecto1.jpg') }}" class="card-img-top" alt="Proyecto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 1</h5>
+                        <p class="card-text">Breve descripción del proyecto 1.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <img src="{{ url_for('static', filename='images/proyecto2.jpg') }}" class="card-img-top" alt="Proyecto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Proyecto 2</h5>
+                        <p class="card-text">Breve descripción del proyecto 2.</p>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-4">
+
+    <!-- Sección: Tecnologías -->
+    <section id="tecnologias" class="mt-5 text-center">
+        <h2>Tecnologías y Herramientas</h2>
+        <div class="row mt-4 justify-content-center">
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-python technology-icon"></i>
+                <p>Python (Avanzado)</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-java technology-icon"></i>
+                <p>Java (Intermedio)</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-android technology-icon"></i>
+                <p>Kotlin (Principiante)</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-apple technology-icon"></i>
+                <p>Dart (Principiante)</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fas fa-code technology-icon"></i>
+                <p>VBasic (Principiante)</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-html5 technology-icon"></i>
+                <p>HTML, CSS</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-bootstrap technology-icon"></i>
+                <p>Bootstrap</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fab fa-js technology-icon"></i>
+                <p>WTForms</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fas fa-database technology-icon"></i>
+                <p>MySQL</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fas fa-database technology-icon"></i>
+                <p>PostgreSQL</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fas fa-database technology-icon"></i>
+                <p>SQLite</p>
+            </div>
+            <div class="col-3 col-sm-2">
+                <i class="fas fa-database technology-icon"></i>
+                <p>SQLAlchemy</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-4">
+
+    <!-- Sección: Formación -->
+    <section id="formacion" class="mt-5">
+        <h2>Formación</h2>
+        <p><strong>Master Python Udemy Certificate</strong> - Bootcamp by Angela Yu | Junio 2024 - Agosto 2024</p>
+        <p><strong>C.F.G.S. Desarrollo de Aplicaciones Multiplataforma</strong> - IES Vista Alegre | Septiembre 2022 - Junio 2024</p>
+        <p><strong>Grado en Arte Dramático</strong> - E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
+    </section>
+
+    <div class="text-center mt-5">
+        <a href="/contact" class="btn btn-primary btn-lg">Contáctame</a>
+    </div>
+</div>
+
+{% include 'footer.html' %}
