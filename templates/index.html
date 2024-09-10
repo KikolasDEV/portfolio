@@ -1,16 +1,26 @@
 {% include 'header.html' %}
 
 <div class="container mt-5">
-    <!-- Sección: Sobre mí con imagen -->
-    <section id="sobre-mi" class="text-center">
-        <img src="{{ url_for('static', filename='images/Kiko_Amarillo_CARA.jpg') }}" alt="José Francisco González Amarillo" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
-        <h1 class="display-4">¡Hola! Soy José Francisco González Amarillo</h1>
-        <p class="lead">Desarrollador de software con pasión por resolver problemas complejos. Tengo experiencia en Python y frameworks como Flask, Jinja, y Bootstrap.</p>
+    <!-- Sección: Sobre mí con imagen y texto -->
+    <section id="sobre-mi" class="d-flex align-items-center">
+        <div class="row">
+            <!-- Imagen alineada a la izquierda -->
+            <div class="col-md-4 text-center">
+                <img src="{{ url_for('static', filename='images/Kiko_Amarillo_CARA.jpg') }}" alt="José Francisco González Amarillo" class="rounded-circle profile-image">
+            </div>
+            <!-- Texto alineado a la derecha -->
+            <div class="col-md-8 d-flex align-items-center">
+                <div>
+                    <h1 class="display-4 nombre-completo">José Francisco González Amarillo</h1>
+                    <p class="lead descripcion">Desarrollador de software con pasión por resolver problemas complejos. Tengo experiencia en Python y frameworks como Flask, Jinja, y Bootstrap.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <hr class="my-4">
 
-    <!-- Sección: Tecnologías en 2 filas -->
+    <!-- Sección: Tecnologías y Herramientas en 2 filas -->
     <section id="tecnologias" class="mt-5">
         <h2 class="text-center">Tecnologías y Herramientas</h2>
         <div class="row justify-content-center mt-4">
@@ -93,6 +103,45 @@
                     <p>SQLAlchemy</p>
                 </div>
             </div>
+
+            <!-- Sección: Aprendiendo -->
+            <div class="col-12 mt-5">
+                <h3 class="text-center">Aprendiendo...</h3>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12 d-flex justify-content-around">
+                        <div class="technology-item">
+                            <i class="fab fa-python technology-icon"></i>
+                            <p>Django</p>
+                        </div>
+                        <div class="technology-item">
+                            <i class="fab fa-js-square technology-icon"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="technology-item">
+                            <i class="fas fa-c technology-icon"></i><span class="ml-1">#</span>
+                            <p>C#</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-4">
+
+    <!-- Sección: Experiencia -->
+    <section id="experiencia" class="mt-5">
+        <h2 class="text-center">Experiencia Laboral</h2>
+        <div class="row mt-4">
+            <div class="col-12">
+                <h4><strong>Prácticas en Desarrollo de Aplicaciones</strong></h4>
+                <p><strong>IES Vista Alegre</strong> - Marzo 2024 - Mayo 2024</p>
+                <ul>
+                    <li>Desarrollé aplicaciones multiplataforma utilizando Python y Java.</li>
+                    <li>Colaboré en la creación de bases de datos con MySQL y PostgreSQL.</li>
+                    <li>Implementé interfaces de usuario con Tkinter y herramientas de frontend como Bootstrap.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -106,9 +155,6 @@
         <p><strong>Grado en Arte Dramático</strong> - E.S.A.D. de Sevilla | Septiembre 2015 - Junio 2019</p>
     </section>
 
-    <div class="text-center mt-5">
-        <a href="/contact" class="btn btn-primary btn-lg">Contáctame</a>
-    </div>
 </div>
 
 {% include 'footer.html' %}

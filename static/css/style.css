@@ -1,3 +1,6 @@
+/* Fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Slab:wght@400&display=swap');
+
 /* Paleta de colores oscuros con gradientes */
 body {
     background: linear-gradient(135deg, #2C2E3E, #1E1F29);
@@ -5,9 +8,22 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Estilo de los títulos */
 h1, h2, h3, h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #e0e0e0;
+}
+
+/* Estilo para la descripción */
+.descripcion {
+    font-family: 'Roboto Slab', serif;
+    color: #e0e0e0;
+}
+
+/* Ajuste del tamaño del h1 (nombre completo) */
+.nombre-completo {
+    font-size: 2.5rem; /* Ajuste para que el nombre entre en una sola línea */
+    line-height: 1.2;  /* Ajuste de la altura de línea para mejorar la legibilidad */
 }
 
 .navbar {
@@ -103,4 +119,19 @@ footer {
     p {
         font-size: 11px;
     }
+}
+
+/* Ajuste de espaciado entre la imagen y el texto */
+#sobre-mi {
+    padding-left: 15px;
+}
+
+/* Estilo para la imagen de perfil */
+.profile-image {
+    width: 200px; /* Aumenta el tamaño de la imagen */
+    height: 200px; /* Aumenta el tamaño de la imagen */
+    object-fit: cover; /* Mantiene la imagen ajustada sin deformarse */
+    object-position: 50% 5%; /* Centra la imagen en el eje Y para evitar que se corte la cara */
+    border-radius: 50%;
+    border: 3px solid #bb86fc;
 }
