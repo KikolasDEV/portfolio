@@ -46,14 +46,35 @@ img.rounded-circle {
     border: 3px solid #bb86fc;
 }
 
-/* Iconos de tecnologías */
+/* Estilos uniformes para los iconos de Font Awesome */
+.technology-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Iconos de Font Awesome con el mismo tamaño y color */
 .technology-icon {
-    font-size: 40px;
+    font-size: 35px;
     color: #03dac6;
+    transition: color 0.3s ease;
 }
 
 .technology-icon:hover {
     color: #bb86fc;
+}
+
+/* Estilo de los nombres de las tecnologías */
+p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+/* Líneas divisorias */
+hr {
+    border-top: 1px solid #bb86fc;
 }
 
 /* Footer */
@@ -65,35 +86,21 @@ footer {
 
 /* Responsive para tablet y móvil */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-
-    img.rounded-circle {
-        width: 100px;
-        height: 100px;
-    }
-
     .technology-icon {
         font-size: 30px;
     }
 
-    .col-3 {
-        width: 50%;
-        margin-bottom: 20px;
+    p {
+        font-size: 12px;
     }
 }
 
 @media (max-width: 576px) {
-    h1 {
-        font-size: 2rem;
+    .technology-icon {
+        font-size: 28px;
     }
 
-    .col-3 {
-        width: 100%;
+    p {
+        font-size: 11px;
     }
 }
