@@ -1,10 +1,11 @@
+import os
+from dotenv import load_dotenv
+
 from flask import Flask, render_template, flash
 from flask_mail import Mail, Message
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Email
-import os
-from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -36,12 +37,19 @@ def contact():
         nombre = form.nombre.data
         email = form.email.data
         mensaje = form.mensaje.data
+
+        # Crear el mensaje de correo electrónico
         msg = Message('Nuevo mensaje de tu portafolio',
                       sender=os.getenv('MAIL_USERNAME'),
                       recipients=[os.getenv('MAIL_RECIPIENT')])
         msg.body = f"Nombre: {nombre}\nCorreo: {email}\nMensaje: {mensaje}"
         mail.send(msg)
         flash('Mensaje enviado. ¡Gracias por contactarme!', 'success')
+
+        # Después de enviar, limpiar los campos del formulario
+        form.nombre.data = ''
+        form.email.data = ''
+        form.mensaje.data = ''
     return render_template('contact.html', form=form)
 
 if __name__ == "__main__":
