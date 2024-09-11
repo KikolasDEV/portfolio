@@ -77,6 +77,22 @@ img.rounded-circle {
     transition: color 0.3s ease;
 }
 
+/* Ajustes personalizados para el icono de C# */
+.icon-csharp {
+    display: inline-flex;
+    align-items: center;
+}
+
+.sharp-symbol {
+    font-size: 1.5rem; /* Tamaño del símbolo # */
+    margin-left: 5px;  /* Espacio entre la C y el # */
+    color: #03dac6;    /* Mismo color que el icono */
+}
+
+.technology-icon:hover + .sharp-symbol {
+    color: #bb86fc; /* Cambia el color del # al hacer hover sobre el ícono */
+}
+
 .technology-icon:hover {
     color: #bb86fc;
 }
@@ -98,6 +114,7 @@ footer {
     background-color: #1E1F29;
     padding: 20px 0;
     color: #e0e0e0;
+    margin-top: 150px; /* Espacio adicional entre el último contenido y el footer */
 }
 
 /* Responsive para tablet y móvil */
