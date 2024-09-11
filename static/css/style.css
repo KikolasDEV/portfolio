@@ -1,33 +1,17 @@
 /* Fuentes de Google */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Slab:wght@400&display=swap');
 
-/* Paleta de colores oscuros con gradientes */
+/* General - Paleta de colores oscuros con gradientes */
 body {
     background: linear-gradient(135deg, #2C2E3E, #1E1F29);
     color: #e0e0e0;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Estilo de los títulos */
-h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    color: #e0e0e0;
-}
-
-/* Estilo para la descripción */
-.descripcion {
-    font-family: 'Roboto Slab', serif;
-    color: #e0e0e0;
-}
-
-/* Ajuste del tamaño del h1 (nombre completo) */
-.nombre-completo {
-    font-size: 2.5rem; /* Ajuste para que el nombre entre en una sola línea */
-    line-height: 1.2;  /* Ajuste de la altura de línea para mejorar la legibilidad */
-}
-
+/* Header y Navbar */
 .navbar {
     background-color: #1E1F29;
+    transition: all 0.3s ease-in-out; /* Para una transición suave */
 }
 
 .nav-link {
@@ -36,29 +20,6 @@ h1, h2, h3, h4 {
 
 .nav-link:hover {
     color: #bb86fc;
-}
-
-.card {
-    background-color: #2C2E3E;
-    border: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para las tarjetas */
-}
-
-.card-title {
-    color: #bb86fc;
-}
-
-.card-text {
-    color: #b0b0b0; /* Color para el texto de las tarjetas */
-}
-
-/* Estilo estándar para las imágenes de las tarjetas de proyectos */
-.card-img-top {
-    width: 100%;          /* La imagen ocupará el 100% del ancho del contenedor */
-    height: 250px;        /* Altura fija para ambas imágenes */
-    object-fit: cover;    /* Asegura que la imagen mantenga la relación de aspecto mientras se recorta */
-    object-position: 50% 7%; /* Centra la imagen */
-    border-bottom: 2px solid #bb86fc; /* Añadir un pequeño borde de color */
 }
 
 .btn-primary {
@@ -76,7 +37,40 @@ img.rounded-circle {
     border: 3px solid #bb86fc;
 }
 
-/* Estilos uniformes para los iconos de Font Awesome */
+/* Sobre mí - Estilo de los títulos y la descripción */
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
+}
+
+.nombre-completo {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.descripcion {
+    font-family: 'Roboto Slab', serif;
+    color: #e0e0e0;
+}
+
+/* Sección de Correo en "Sobre mí" */
+.email-section {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.email-section .fas {
+    color: #bb86fc;
+}
+
+.email-text {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+/* Sección de Tecnologías y Herramientas */
 .technology-item {
     display: flex;
     flex-direction: column;
@@ -84,11 +78,14 @@ img.rounded-circle {
     margin: 10px;
 }
 
-/* Iconos de Font Awesome con el mismo tamaño y color */
 .technology-icon {
     font-size: 35px;
     color: #03dac6;
     transition: color 0.3s ease;
+}
+
+.technology-icon:hover {
+    color: #bb86fc;
 }
 
 /* Ajustes personalizados para el icono de C# */
@@ -98,16 +95,12 @@ img.rounded-circle {
 }
 
 .sharp-symbol {
-    font-size: 1.5rem; /* Tamaño del símbolo # */
-    margin-left: 5px;  /* Espacio entre la C y el # */
-    color: #03dac6;    /* Mismo color que el icono */
+    font-size: 1.5rem;
+    margin-left: 5px;
+    color: #03dac6;
 }
 
 .technology-icon:hover + .sharp-symbol {
-    color: #bb86fc; /* Cambia el color del # al hacer hover sobre el ícono */
-}
-
-.technology-icon:hover {
     color: #bb86fc;
 }
 
@@ -118,17 +111,42 @@ p {
     color: #e0e0e0;
 }
 
-/* Líneas divisorias */
-hr {
-    border-top: 1px solid #bb86fc;
+/* Sección de Proyectos - Estilo estándar para las tarjetas */
+.card {
+    background-color: #2C2E3E;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.card-title {
+    color: #bb86fc;
+}
+
+.card-text {
+    color: #b0b0b0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 7%;
+    border-bottom: 2px solid #bb86fc;
+}
+
+/* Sección de Contacto */
 
 /* Footer */
 footer {
     background-color: #1E1F29;
     padding: 20px 0;
     color: #e0e0e0;
-    margin-top: 150px; /* Espacio adicional entre el último contenido y el footer */
+    margin-top: 150px;
+}
+
+/* Líneas divisorias */
+hr {
+    border-top: 1px solid #bb86fc;
 }
 
 /* Responsive para tablet y móvil */
@@ -159,27 +177,42 @@ footer {
 
 /* Estilo para la imagen de perfil */
 .profile-image {
-    width: 200px; /* Aumenta el tamaño de la imagen */
-    height: 200px; /* Aumenta el tamaño de la imagen */
-    object-fit: cover; /* Mantiene la imagen ajustada sin deformarse */
-    object-position: 50% 5%; /* Centra la imagen en el eje Y para evitar que se corte la cara */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50% 5%;
     border-radius: 50%;
     border: 3px solid #bb86fc;
 }
 
-/* Estilo para la sección de correo */
-.email-section {
+/* Forzar que el footer quede al final de la página solo en la página de contacto */
+.contact-page {
+    min-height: 82.5vh;
     display: flex;
-    align-items: center;
-    font-size: 1.2rem;
-    color: #e0e0e0;
+    flex-direction: column;
 }
 
-.email-section .fas {
-    color: #bb86fc;
+/* Compactar el formulario y los textos en la página de contacto */
+.contact-page p.lead {
+    margin: 0 0 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 15px; /* Añadir padding para evitar que el texto toque los bordes */
 }
 
-.email-text {
-    margin-left: 10px;
-    font-size: 1.2rem;
+.contact-page .form-group {
+    margin-bottom: 15px; /* Reduce el espacio inferior entre los campos del formulario */
+}
+
+.contact-page h2 {
+    font-family: 'Montserrat', sans-serif; /* Asegurar la fuente de los títulos */
+}
+
+
+.contact-page .container {
+    padding: 20px 0; /* Reduce el padding alrededor del formulario */
+}
+
+.contact-page footer {
+    margin-top: auto; /* Esto asegura que el footer esté al final */
 }

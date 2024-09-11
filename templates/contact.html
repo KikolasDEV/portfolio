@@ -1,8 +1,27 @@
 {% include 'header.html' %}
 
-<div class="container mt-5">
+<div class="container contact-page mt-5 pt-4">
     <h2 class="text-center">Contacto</h2>
-    <p class="lead text-center">Si tienes alguna pregunta o comentario, no dudes en contactarme mediante este formulario.</p>
+
+    <!-- Mostrar mensajes flash aquí -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="alert alert-success" role="alert">
+          {% for category, message in messages %}
+            {{ message }}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <p class="lead text-center" style="font-family: 'Roboto Slab', serif;">
+                Si tienes alguna pregunta o sugerencia, puedes escribirme directamente a mi correo
+                <strong><i class="fas fa-envelope"></i> kikoamarillo94@gmail.com</strong> o si lo prefieres, puedes usar el siguiente formulario.
+            </p>
+        </div>
+    </div>
 
     <div class="row justify-content-center mt-4">
         <div class="col-md-6">
@@ -10,8 +29,8 @@
                 {{ form.hidden_tag() }}
 
                 <div class="form-group mb-3">
-                    {{ form.nombre.label(class="form-label") }}
-                    {{ form.nombre(class="form-control", placeholder="Ingresa tu nombre") }}
+                    {{ form.nombre.label(class="form-label", style="font-family: 'Roboto Slab', serif;") }}
+                    {{ form.nombre(class="form-control", placeholder="Ingresa tu nombre", style="font-family: 'Roboto Slab', serif;") }}
                     {% if form.nombre.errors %}
                         <div class="text-danger">
                             {% for error in form.nombre.errors %}
@@ -22,8 +41,8 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    {{ form.email.label(class="form-label") }}
-                    {{ form.email(class="form-control", placeholder="Ingresa tu correo electrónico") }}
+                    {{ form.email.label(class="form-label", style="font-family: 'Roboto Slab', serif;") }}
+                    {{ form.email(class="form-control", placeholder="Ingresa tu correo electrónico", style="font-family: 'Roboto Slab', serif;") }}
                     {% if form.email.errors %}
                         <div class="text-danger">
                             {% for error in form.email.errors %}
@@ -34,8 +53,8 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    {{ form.mensaje.label(class="form-label") }}
-                    {{ form.mensaje(class="form-control", rows=5, placeholder="Escribe tu mensaje") }}
+                    {{ form.mensaje.label(class="form-label", style="font-family: 'Roboto Slab', serif;") }}
+                    {{ form.mensaje(class="form-control", rows=5, placeholder="Escribe tu mensaje", style="font-family: 'Roboto Slab', serif;") }}
                     {% if form.mensaje.errors %}
                         <div class="text-danger">
                             {% for error in form.mensaje.errors %}
@@ -46,7 +65,7 @@
                 </div>
 
                 <div class="d-grid">
-                    {{ form.submit(class="btn btn-primary btn-block") }}
+                    {{ form.submit(class="btn btn-primary btn-block", style="font-family: 'Roboto Slab', serif;") }}
                 </div>
             </form>
         </div>
@@ -54,3 +73,6 @@
 </div>
 
 {% include 'footer.html' %}
+
+<!-- Añadir el script para resetear el formulario -->
+<script src="{{ url_for('static', filename='js/form-reset.js') }}"></script>
