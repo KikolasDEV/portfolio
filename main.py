@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'
+app.secret_key = os.getenv('APP_SECRET_KEY')
 
 # Configuración de Flask-Mail para enviar correos
 app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
@@ -38,7 +38,7 @@ def contact():
         mensaje = form.mensaje.data
         msg = Message('Nuevo mensaje de tu portafolio',
                       sender=os.getenv('MAIL_USERNAME'),
-                      recipients=[os.getenv('MAIL_RECIPIENT')])  # Cambiado para usar el entorno de variable
+                      recipients=[os.getenv('MAIL_RECIPIENT')])
         msg.body = f"Nombre: {nombre}\nCorreo: {email}\nMensaje: {mensaje}"
         mail.send(msg)
         flash('Mensaje enviado. ¡Gracias por contactarme!', 'success')
