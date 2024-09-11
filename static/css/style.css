@@ -41,10 +41,24 @@ h1, h2, h3, h4 {
 .card {
     background-color: #2C2E3E;
     border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para las tarjetas */
 }
 
 .card-title {
     color: #bb86fc;
+}
+
+.card-text {
+    color: #b0b0b0; /* Color para el texto de las tarjetas */
+}
+
+/* Estilo estándar para las imágenes de las tarjetas de proyectos */
+.card-img-top {
+    width: 100%;          /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 250px;        /* Altura fija para ambas imágenes */
+    object-fit: cover;    /* Asegura que la imagen mantenga la relación de aspecto mientras se recorta */
+    object-position: 50% 7%; /* Centra la imagen */
+    border-bottom: 2px solid #bb86fc; /* Añadir un pequeño borde de color */
 }
 
 .btn-primary {
@@ -151,4 +165,21 @@ footer {
     object-position: 50% 5%; /* Centra la imagen en el eje Y para evitar que se corte la cara */
     border-radius: 50%;
     border: 3px solid #bb86fc;
+}
+
+/* Estilo para la sección de correo */
+.email-section {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+.email-section .fas {
+    color: #bb86fc;
+}
+
+.email-text {
+    margin-left: 10px;
+    font-size: 1.2rem;
 }

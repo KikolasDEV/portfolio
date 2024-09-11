@@ -13,6 +13,11 @@
                 <div>
                     <h1 class="display-4 nombre-completo">José Francisco González Amarillo</h1>
                     <p class="lead descripcion">Desarrollador de software con experiencia en Python y frameworks como Flask, Jinja y Bootstrap. Mi objetivo es especializarme en Python así como seguir aumentando conocimiento sobre otras tecnologías.</p>
+
+                    <div class="email-section mt-2">
+                        <i class="fas fa-envelope"></i>
+                        <span class="email-text ms-2">kikoamarillo94@gmail.com</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,6 +148,57 @@
                 <li>Colaboré en la optimización de bases de datos y análisis de datos.</li>
                 <li>Participé en el desarrollo de soluciones para mejorar la organización y trabajo en equipo.</li>
             </ul>
+        </div>
+    </div>
+</section>
+
+    <hr class="my-4">
+
+    <!-- Sección: Proyectos -->
+<!-- Sección: Proyectos -->
+<section id="proyectos" class="mt-5">
+    <h2 class="text-center">Proyectos</h2>
+    <div class="row justify-content-center mt-4">
+        <!-- Tarjeta del proyecto "Blog Capstone Project" -->
+        <div class="col-md-5">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ url_for('static', filename='images/Captura1.PNG') }}" class="card-img-top" alt="Blog Capstone Project Image">
+                <div class="card-body">
+                    <h5 class="card-title">Blog Capstone Project</h5>
+                    <p class="card-text">
+                        Un proyecto completo de desarrollo de un blog usando Python, Flask, RESTful Routing y SQLAlchemy. Implementación de autenticación, publicación, edición y borrado de entradas (añadiendo permisos específicos de admin y usuarios) y gestión de bases de datos.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="https://github.com/KikolasDEV/blog-capstone-project" class="btn btn-primary" target="_blank">Ver en GitHub</a>
+                        <div>
+                            <i class="fab fa-python technology-icon"></i>
+                            <i class="fas fa-flask technology-icon"></i>
+                            <i class="fas fa-code technology-icon"></i>
+                            <i class="fab fa-bootstrap technology-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta del proyecto "VirtualVault" -->
+        <div class="col-md-5">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ url_for('static', filename='images/1.png') }}" class="card-img-top" alt="VirtualVault Project Image">
+                <div class="card-body">
+                    <h5 class="card-title">VirtualVault</h5>
+                    <p class="card-text">
+                        Aplicación de Flutter diseñada para proporcionar una experiencia de compra en línea sencilla y efectiva. La aplicación permite a los usuarios explorar productos, gestionar favoritos, añadir artículos al carrito y realizar pedidos. Además, incluye funcionalidades de administrador.
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="https://github.com/KikolasDEV/VirtualVault" class="btn btn-primary" target="_blank">Ver en GitHub</a>
+                        <div>
+                            <i class="fas fa-code technology-icon"></i>
+                            <i class="fas fa-mobile-alt technology-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
